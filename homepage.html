@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Starts Here</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(71, 205, 212);
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: slideshow 15s infinite;
+        }
+
+        @keyframes slideshow {
+            0% {
+                background-image: url('image2.jpeg');
+            }
+
+            33% {
+                background-image: url('image3.jpg');
+            }
+
+            66% {
+                background-image: url('image4.jpg');
+            }
+
+            100% {
+                background-image: url('image6.jpg');
+            }
+        }
+
+       
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #aab0b2;
+            padding: 10px 20px;
+            width: 100%;
+            color: black;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo img{
+            max-width: 50px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .login-button {
+            background-color: #c3c9ca;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #a3a7a3;
+        }
+
+        .center-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            text-align: center;
+        }
+
+        .center-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .center-text h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #555;
+            margin: 0.5rem 0 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .discover-more{
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+            background-color: #74787b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .discover-button {
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+            background-color: #74787b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .start-planning{
+            padding: 1rem;
+            font-size: 1.0rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #050505;
+            background-color: #74787b;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .discover-button:hover {
+            background-color: #a6b4a6;
+        }
+
+        .text-image {
+            text-align: left;
+            padding: 2rem;
+        }
+
+        .text-image h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #222;
+            text-transform: uppercase;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .image-box {
+            text-align: center;
+            background-color: #c4c2c2;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .image-box h3{
+            color: #000;
+        }
+        .image-box p{
+            color: #000;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+
+        .startplan-button {
+            padding: 1rem;
+            font-size: 1.0rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #050505;
+            background-color: #74787b;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .startplan-button:hover {
+            background-color: #a6b4a6;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #aab0b2;
+            border-top: 1px solid #dee2e6;
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons .icon {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons .icon:hover {
+            color: #007bff;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            text-align: right;
+        }
+
+        .footer-right p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #000;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo1.jfif" alt="Company Logo">
+        </div>
+        <div class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="cantactus.html">Contact Us</a>
+            <a href="Review.html">Reviews</a>
+            <button class="login-button" onclick="window.location.href='loginpage.html';">Login</button>
+
+
+        </div>
+    </div>
+
+    <div class="center-text">
+        <h1>Your Adventure Starts Here...</h1>
+        <h2>Effortless Travel Planning, Unforgettable Experiences</h2>
+        <button class="discover-more" onclick="window.location.href='aboutus.html';">DISCOVER MORE</button>
+    </div>
+
+    <div class="text-image">
+        <h1>Most Visited Destinations...</h1>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="d1.jpg" alt="Sigiriya">
+                <h3>Sigiriya</h3>
+              <p>Sigiriya, an ancient fortress perched atop a giant rock, is a breathtaking marvel in Sri Lanka. Built in the 5th century, this UNESCO World Heritage Site offers stunning views, ancient frescoes, and a fascinating history. Climb through the lion’s gate to explore royal gardens, ruins, and the incredible palace that once stood at the summit. A must-see for history lovers and adventurers alike!</p>
+            </div>
+            <div class="image-box">
+                <img src="d2.jpg" alt="Colombo Lotus Tower" alt="Colombo Lotus Tower">
+                <h3>Colombo Lotus Tower</h3>
+                <p>The Colombo Lotus Tower is Sri Lanka's tallest and most iconic landmark, standing at 350 meters. This stunning lotus-shaped structure symbolizes the nation's growth and innovation. With a breathtaking observation deck offering panoramic views of Colombo, the tower is a hub for entertainment, telecommunications, and cultural events, making it a must-visit attraction in the heart of the city.</p>
+            </div>
+            <div class="image-box">
+                <img src="d6.jpg" alt="Beruwella Light House">
+                    <h3>Beruwella Light House</h3>
+                    <p>The Beruwala Lighthouse, located on Barberyn Island off the coast of Beruwala, Sri Lanka, is a historic maritime landmark. Built in 1889, this granite lighthouse stands about 34 meters (112 feet) tall and is surrounded by lush greenery, offering panoramic views of the Indian Ocean.
+
+                        Accessible by a short boat ride from Beruwala, the lighthouse is a popular tourist attraction for its scenic beauty, historic significance, and serene surroundings.</p>
+            </div>
+        </div>
+        <button class="start-planning" onclick="window.location.href='plan your trip.html';">START PLANNING</button>
+
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <p>© 2024 Your Website. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</body>
+
+</html>

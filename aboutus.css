@@ -1,0 +1,174 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-image: url('mmm1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #0c838954;
+}
+
+.logo img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: black;
+}
+
+.menu a {
+  color: black;
+  font-weight: bold;
+
+}
+
+.book-now {
+  background-color: #2157b5;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-now:hover {
+  background-color: #555;
+}
+
+.about-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-image .image-placeholder {
+  width: 500px;
+  height: 300px;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('m4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+  border-color: wheat;
+}
+
+.learn-more {
+  background-color: #3b45cf;
+  color: hsl(0, 37%, 92%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.learn-more:hover {
+  background-color: #555;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.social-media a:hover {
+  color: #555;
+}
+
+.footer {
+  background-color: #0c7a89b3;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  margin: 0 5px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.footer-social a:hover {
+  color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

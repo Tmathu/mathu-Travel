@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+            background-image: url('mmm2.jfif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #20a72261;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header .logo {
+            font-size: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            max-width: 50px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            color: #007BFF;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .review-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 50PX;
+            border: 1px solid #1a1818;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .review-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #891f1f;
+            border-radius: 4px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: #000;
+            border-radius: 4px;
+        }
+
+        .stars span {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .stars span.active {
+            color: #b7e3ea;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #20a72261;
+            border-top: 1px solid #dee2e6;
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons .icon {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons .icon:hover {
+            color: #007bff;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            text-align: right;
+        }
+
+        .footer-right p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #000;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo1.jfif" alt="Company Logo">
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="cantactus.html">Contact Us</a>
+            <a href="Review.html">Reviews</a>
+            <button class="book-now" onclick="window.location.href='plan your trip.html';">Book Now</button>
+
+        </nav>
+    </header>
+
+    <div class="review-container">
+        <h1>Review</h1>
+        <form action="review.php" method="POST">
+            <input type="text" name="place" placeholder="Place" id="place" required>
+            
+           
+            <div class="stars" id="star-rating">
+                <span class="star" data-star="1">&#9734;</span>
+                <span class="star" data-star="2">&#9734;</span>
+                <span class="star" data-star="3">&#9734;</span>
+                <span class="star" data-star="4">&#9734;</span>
+                <span class="star" data-star="5">&#9734;</span>
+            </div>
+            <input type="hidden" name="stars" id="stars" value="0" required>
+            
+
+            <textarea placeholder="Feedback" name="feedback" id="feedback" required></textarea>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <p>© 2024 Your Website. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="review.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</body>
+</html>

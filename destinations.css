@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('m3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #491934;
+    padding: 0.5rem 1rem;
+    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+    
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      background-color: #090808;
+    }
+    .booknow-button {
+      background-color: #0e0e0e;
+      color: rgb(241, 241, 241);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .book-now {
+    background-color: #0e0e0e;
+      color: rgb(241, 241, 241);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  .booknow-button:hover {
+      background-color: #b8afaf;
+  }
+  .center2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center2-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(5, 5, 5);
+    margin: 0;
+    text-transform: uppercase;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.image-box {
+  text-align: center;
+  background-color: #481f32;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-box img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 15px;
+}
+.image-box p{
+  color: white;
+}
+.image-box h3{
+  color: white;
+}
+
+.destination-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.destination-info h3 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.destination-info p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.destination-info button {
+  background-color: #1b0904;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.destination-info button:hover {
+  background-color: #c6c2c1;
+}
+
+.learnmore-button {
+  display: block; 
+  margin: 2rem auto; 
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #070e08;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.learn-more{
+  display: block; 
+  margin: 2rem auto; 
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #070e08;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.learnmore-button:hover {
+    background-color: #a6b4a6;
+}
+ 
+.footer {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #491934;
+    border-top: 1px solid #dee2e6;
+    flex-direction: row-reverse;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons .icon {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons .icon:hover {
+  color: #007bff;
+}
+
+
+.footer-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-align: right;
+}
+
+.footer-right p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #f7f2f2;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fbf5f5;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #007bff; 
+}
